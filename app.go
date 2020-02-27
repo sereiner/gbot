@@ -2,17 +2,18 @@ package gbot
 
 import (
 	"flag"
-	container2 "gbot/container"
-	"gbot/gbot"
-	"gbot/kernel"
-	"gbot/log"
+	"github.com/sereiner/gbot/container"
+	"github.com/sereiner/gbot/gbot"
+	"github.com/sereiner/gbot/kernel"
+	"github.com/sereiner/gbot/log"
+
 	"github.com/spf13/viper"
 )
 
 var session string
 
 type GbotApp struct {
-	container        *container2.Container
+	container        *container.Container
 	config           *viper.Viper
 	serviceProviders []gbot.Resover
 	*option
@@ -33,7 +34,7 @@ func New(opts ...Option) App {
 func newApp(opts ...Option) *GbotApp {
 	flag.Parse()
 	a := &GbotApp{
-		container: container2.NewContainer(),
+		container: container.NewContainer(),
 		config:    viper.New(),
 		option:    &option{path: "./tmp/", download: DownloadConf{EmoticonPath: "./tmp/emoticons/"}},
 		serviceProviders: []gbot.Resover{
@@ -73,7 +74,7 @@ func (a *GbotApp) ServiceProviders() []gbot.Resover {
 	return a.serviceProviders
 }
 
-func (a *GbotApp) Container() *container2.Container {
+func (a *GbotApp) Container() *container.Container {
 	return a.container
 }
 

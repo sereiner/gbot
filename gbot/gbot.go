@@ -1,7 +1,7 @@
 package gbot
 
 import (
-	"gbot/container"
+	"github.com/sereiner/gbot/container"
 	"github.com/spf13/viper"
 )
 

@@ -1,17 +1,17 @@
 package kernel
 
 import (
-	gbot2 "gbot/gbot"
-	"gbot/session"
+	"github.com/sereiner/gbot/gbot"
+	"github.com/sereiner/gbot/session"
 	"github.com/sereiner/library/file"
 	"os"
 )
 
 type Kernel struct {
-	gbot gbot2.Gbot
+	gbot gbot.Gbot
 }
 
-func NewKernel(gbot gbot2.Gbot) *Kernel {
+func NewKernel(gbot gbot.Gbot) *Kernel {
 	return &Kernel{gbot: gbot}
 }
 

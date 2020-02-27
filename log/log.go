@@ -1,7 +1,7 @@
 package log
 
 import (
-	"gbot/gbot"
+	"github.com/sereiner/gbot/gbot"
 	logger "github.com/sereiner/library/log"
 	"github.com/wule61/log"
 	"os"

@@ -1,7 +1,7 @@
 package session
 
 import (
-	"gbot/gbot"
+	"github.com/sereiner/gbot/gbot"
 	"github.com/sereiner/library/utility"
 )
 
